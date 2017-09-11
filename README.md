@@ -10,6 +10,12 @@ CSS naming styles and methodology based on Medium.com's article, [Battling BEM â
 
 ## Usage
 
+install dependencies
+
+```bash
+    $ npm install
+```
+
 To use webpack dev server & watch,
 
 ```bash
