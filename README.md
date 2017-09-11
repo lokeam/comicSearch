@@ -10,18 +10,6 @@ CSS naming styles and methodology based on Medium.com's article, [Battling BEM â
 
 ## Usage
 
-To build on development mode, generates a minified version with source map.
-
-```bash
-    $ npm run build:dev
-```
-
-To build on production mode
-
-```bash
-    $ npm run build
-```
-
 To use webpack dev server & watch,
 
 ```bash
