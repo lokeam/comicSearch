@@ -1,0 +1,35 @@
+body {
+  background: #000;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: 'TradeGothic'!important;
+  height: 100%;
+  line-height: 21px;
+  margin: 0;
+  padding: 59px 30px;
+
+  @include breakpoint("mobileonly") {
+    box-sizing: border-box;
+    padding: 0 20px 0 20px;
+  }
+
+}
+
+i {
+  font-family: 'Material Icons';
+  font-feature-settings: 'liga';
+  font-weight: normal;
+  font-style: normal;
+  font-size:inherit;
+  line-height:inherit;
+  vertical-align: top;
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}

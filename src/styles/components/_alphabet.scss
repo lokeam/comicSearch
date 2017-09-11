@@ -1,0 +1,35 @@
+.alphabet {
+	display: flex;
+	flex-direction: row;
+	flex-flow: row wrap;
+	justify-content: center;
+	list-style: none;
+	margin: 0 auto;
+	padding: 30px 0 50px 0;
+	-webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+
+  & .alphabet__ltr {
+			align-items: center;
+			border: 1px solid $aqua;
+			color: $aqua;
+			cursor: pointer;
+			display: flex;
+			height: 40px;
+			justify-content: center;
+			margin: 10px;
+			width: 40px;
+		}
+
+	@include breakpoint("mobileonly") {
+	  padding: 0;
+	  margin: 0;
+	}
+
+	@include breakpoint("tablet") {
+	  padding: 0;
+	  margin: 0;
+	}
+}
+

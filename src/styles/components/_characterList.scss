@@ -1,0 +1,171 @@
+/* Component wrapper and corners */
+.character-wrapper {
+	& .character-wrapper__tab-corner {
+		background-color: $aqua;
+		@include border-radius(15px 33px 0px 0px);
+		display: inline-block;
+	  height: 19px;
+	  left: 0px;
+	  position: relative;
+	  top: 10px;
+	  width: 131px;
+	  z-index: 2;
+	}
+
+	& .character-wrapper__tab-corner:before {
+		background-color: $aqua;
+		@include border-radius(10px 10px 0px 0px);
+		content: "";
+	  height: 19px;
+	  left: 104px;
+	  position: absolute;
+	  top: 0px;
+	  transform: skewX(40deg);
+	  width: 46px;
+	  z-index: -1;
+	  -webkit-transform: skewX(40deg);
+	}
+
+	& .character-wrapper__tab-lower {
+		background-color: $aqua;
+		@include border-radius(0px 15px 0px 0px);
+		display: inline-block;
+		height: 19px;
+		left: 0px;
+	  position: relative;
+	  top: -21px;
+	  width: 131px;
+	  z-index: 2;
+	}
+
+	& .character-wrapper__tab-lower:before {
+		background-color: $aqua;
+		@include border-radius(33px 33px 0px 0px);
+		content: "";
+	  height: 19px;
+	  position: absolute;
+	  top: 0px;
+	  transform: skewX(40deg);
+	  width: 46px;
+	  -webkit-transform: skewX(40deg);
+	  z-index: -1;
+	}
+
+}
+
+/* character list */
+.character-list {
+	border-color: $aqua;
+	border-style: solid;
+	border-width: 5px 2px 2px 2px;
+  display: flex;
+  flex-direction: column;
+  padding: 62px 20px 70px 20px;
+
+  & .character-list__item {
+		  border-color: $aqua;
+		  border-style: solid;
+		  border-width: 1px 1px 1px 1px;
+		  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+		  color: $aqua;
+			cursor: pointer;
+			list-style: none;
+			margin-bottom: 10px;
+			position: relative;
+			width: 100%;
+
+		& .profile {
+				align-items: center;
+				display: flex;
+				flex-direction: row;
+				width: 100%;
+				height: 100%;
+				flex-wrap: wrap;
+				overflow:hidden;
+				justify-content: flex-start;
+
+			& .profile__body {
+					box-sizing: border-box;
+					width: 100%;
+					height: 90%;
+
+				/* Character name and Id */
+				& .profile__header {
+						align-items: flex-start;
+						display: flex;
+						flex-direction: column;
+						font-size: 25px;
+						padding-left: 20px;
+					  width: 100%;
+					  @include breakpoint("mobileonly") {
+					    font-size: 18px;
+					  }
+					  
+				  & .profile__name {
+					  	align-content: center;
+					  	align-items: center;
+					  	color: $white;
+					  	display: flex;
+							height: 50px;
+							overflow:hidden;
+							text-overflow: ellipsis;
+							text-transform: uppercase;
+							width: 100%;
+						}
+					& .profile__id {
+							font-family: 'TradeGothicLight';
+							font-size: 18px;
+							text-transform: uppercase;
+						}
+
+					}
+				}
+
+				/* Character comics list */
+				& .profile__comics {
+    				padding-top: 20px;
+    				width: 100%;
+
+    			& .comic-list__item {
+    				border-bottom: 1px solid $white;
+    				font-size: 16px;
+    				margin-bottom: 30px;
+    				padding: 0 0 10px  20px;
+
+    			}
+
+    			& .comic-card p{
+							color: $white;
+							font-family: 'TradeGothicLight';
+						}
+
+					& .comic-card__label{
+							color: $aqua;
+							text-transform: uppercase;
+							font-family: 'TradeGothic';
+						}
+				}
+
+			}
+
+		}
+
+	/* Pre-render animation of box shadow hover for increased performance, set its state to hidden */
+	& .character-list__item::before{
+			box-shadow:0 0 100px $aqua;
+			content: '';
+			height: 100%;
+			opacity: 0;
+			position: absolute;
+			transition: opacity 0.3s ease-in-out;
+			-webkit-box-shadow:0 0 100px $aqua;
+			-moz-box-shadow: 0 0 100px $aqua;
+			width: 100%;
+		}
+
+	& .character-list__item:hover::before{
+			opacity: 1;
+		}
+
+}
+
